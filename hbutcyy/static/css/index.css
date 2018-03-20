@@ -1,0 +1,11 @@
+.box{
+    width:600px;
+    height:100px;
+    background-color: #adadad;
+}
+
+.top{
+    width: 600px;
+    height: 200px;
+    background-color: #e4b9b9;
+}

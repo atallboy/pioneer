@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+    <TITLE>湖北工业大学大学生创业园</TITLE>
+	<meta name="description" content="湖北工业大学大学生创业园"/>
+	<meta name="keywords" content="湖北工业大学大学生创业园" />
+    <META content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!--  header-all -->
+    <LINK rel="stylesheet" type="text/css" href="/static/index/static/css/index/global.css">
+    <!-- banner--all -->
+    <LINK rel="stylesheet" type="text/css" href="/static/index/static/css/style.css">
+    <LINK rel="stylesheet" type="text/css" href="/static/index/static/css/lrtk.css">
+    <!-- header-onblur -->
+    <SCRIPT type="text/javascript" src="/static/index/static/js/jquery-1.7.2.min.js"></SCRIPT>
+    <LINK rel="stylesheet" type="text/css" href="/static/index/static/css/lm.css">
+
+    <LINK rel="stylesheet" type="text/css" href="/static/index/static/css/public/foot.css">
+    <link href="/static/index/static/css/public/common.css" rel="stylesheet" type="text/css">
+    <link href="/static/index/static/css/public/detail.css" rel="stylesheet" type="text/css">
+    <SCRIPT type="text/javascript">
+        // Executes the function when DOM will be loaded fully
+        $(document).ready(function () {
+            // hover property will help us set the events for mouse enter and mouse leave
+            $('.navigation li').hover(
+                    // When mouse enters the .navigation element
+                    function () {
+                        //Fade in the navigation submenu
+                        $('ul', this).fadeIn();     // fadeIn will show the sub cat menu
+                    },
+                    // When mouse leaves the .navigation element
+                    function () {
+                        //Fade out the navigation submenu
+                        $('ul', this).fadeOut();     // fadeOut will hide the sub cat menu
+                    }
+            );
+        });
+    </SCRIPT>
+
+
+
+    <STYLE type="text/css">
+        <!--
+        .STYLE1 {
+            font-size: 9pt;
+            color: black;}
+        -->
+    </STYLE>
+    <!--Announced by Visual SiteBuilder 9-->
+    <LINK rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css">
+    <SCRIPT language="javascript" src="HomePage_files/_sitegray.js"></SCRIPT>
+    <!-- CustomerNO:77656262657232307003475455525640035748 -->
+    <LINK rel="stylesheet" type="text/css" href="HomePage_files/index.vsb.css">
+    <SCRIPT type="text/javascript" src="HomePage_files/counter.js"></SCRIPT>
+
+    <SCRIPT type="text/javascript">_jsq_(1001,'/index.jsp',-1,1183494679)</SCRIPT>
+    <!--[if lt IE 7]><script type="text/javascript" src="/system/resource/js/unitpngfix/unitpngfix.js"></script><![endif]-->
+    <META name="GENERATOR" content="MSHTML 9.00.8112.16737">
+</HEAD>
+
+
+
+<BODY style="overflow-x: hidden;" target="_blank">
+
+
+<DIV class="header">
+    <DIV class="box-c2">
+        <DIV class="logo"><!--#begineditable clone="0" namechanged="0" order="0" ispublic="0" tagname="LOGO" viewid="64319" contentviewid="" contype="" stylesysid="" layout="" action="" name="LOGO"-->
+            <TABLE border="0" cellSpacing="0" cellPadding="0">
+                <TBODY>
+                <TR>
+                    <TD><IMG title="湖北工业大学创业园" border="0" alt="湖北工业大学创业园" src="/static/index/static/img/logo3.jpg">
+                    </TD>
+                </TR>
+                </TBODY>
+            </TABLE>
+            <!--#endeditable-->
+        </DIV>
+        <DIV class="top-r">
+                <DIV class="top-fl"> 
+		
+					<a href="../../index/apply/addApply" style="font-size:15px;color:rgb(0,91,172);font-family: Arial;">申请入园&nbsp;</a>
+
+                    <a href="../../index/Grade/judgeLook">个人中心</a>
+                  </DIV>
+        </DIV>
+        <DIV class="mom"></DIV>
+    </DIV>
+</DIV>
+
+
+
+<DIV class="nav">
+    <DIV class="nav-c">
+        <DIV style="margin: 0px auto; width: 100%;"><!--#begineditable clone="0" namechanged="0" order="2" ispublic="0" tagname="网站导航" viewid="64324" contentviewid="" contype="" stylesysid="" layout="" action="" name="网站导航"-->
+            <UL class="navigation">
+                <LI><A href="http://hbutcyy.dxsbb.com/">首页</A>
+                <?php  foreach ($nav as $key =>$value){
+                echo'
+                <LI><A href="#">'.$key.'</A>
+                    <UL>';
+                        foreach ($value as $k=>$v){
+                        echo '
+                        <LI style="padding: 0px 15px;"><A href="../../index/index/showCategory?id='.$v['id'].'"
+                                                          target="_blank">'.$v['name'].'</A></LI>';}
+                        echo'
+                    </UL>
+                    <DIV class="clear"></DIV>
+                </LI>
+                ';}?>
+
+
+            </UL>
+            <!--#endeditable-->
+            <DIV class="clear"></DIV></DIV></DIV></DIV>
+
+<DIV class="banner-bjtoo">
+    <DIV class="lmbanner">
+        <DIV class="lmban"><!--#begineditable contype="" name="装饰图片1" action="" layout="" clone="0" namechanged="0" order="3" ispublic="0" tagname="装饰图片1" viewid="65187" stylesysid=""--><IMG
+                border="0" src="/static/index/static/img/bj.jpg" width="1000" height="230"><!--#endeditable--></DIV>
+</DIV></DIV>
+{include file="public/list_b" /}
+{include file="public/index_footer" /}
+</body>
+</html>
+
+
+

@@ -1,0 +1,48 @@
+{include file="public/header" /}
+<body>
+<div class="pd-20">
+    <div class="Huiform">
+        <form action="upload" method="post" enctype="multipart/form-data">
+            <table class="table table-bg">
+                <tbody>
+                <tr>
+                    <th width="100" class="text-r"><span class="c-red">*</span> 标题：</th>
+                    <td><input type="text" style="width:200px" class="input-text" value="" placeholder="" id="user-name" name="tittle" datatype="*2-16" nullmsg="用户名不能为空"></td>
+                </tr>
+                <tr>
+                    <th class="text-r"><span class="c-red">*</span> 状态：</th>
+                    <td><label>
+                        <input name="have_from" type="radio" id="six_1" value="1">
+                        发布</label>
+                        <label>
+                            <input type="radio" name="have_from" value="0" id="six_0">
+                            存档</label></td>
+                </tr>
+                <tr>
+                    <th class="text-r"><span class="c-red">*</span> 作者：</th>
+                    <td><input type="text" style="width:300px" class="input-text" value="" placeholder="" id="user-tel" name="author"></td>
+                </tr>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">添加图片：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input type="file" class="input-text" value=""  id="img" placeholder=""  name="img">
+                    </div>
+                </div>
+                <tr>
+                    <th class="text-r">详细内容：</th>
+                    <td><textarea class="input-text" name="content" value="" id="user-info" style="height:100px;width:300px;"></textarea></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><button class="btn btn-success radius" type="submit"><i class="icon-ok"></i> 确定</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>

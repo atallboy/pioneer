@@ -1,0 +1,79 @@
+{include file="../application/admin/view/public/header1.html" /}
+ 
+    <title>文件上传</title>
+    <meta name="keywords" content="湖北工业大学，创业园">
+    <meta name="description" content="">
+</head>
+<body>
+
+<article class="page-container">
+    <form action="dealFile" method="post" class="form form-horizontal" id="form-member-add" enctype="multipart/form-data">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>文件名：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="file_name" name="file_name">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>文件：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="file" class="input-text" value="" placeholder="" id="" name="file">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+
+{include file="../application/admin/view/public/footer.html" /}
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/static/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="/static/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="/static/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="/static/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        $("#form-member-add").validate({
+            rules:{
+                apply_name:{
+                    required:true,
+                    minlength:2,
+                    maxlength:16
+                },
+                team_name:{
+                    required:true,
+                    minlength:2,
+                    maxlength:16
+                },
+                tel:{
+                    isMobile:true,
+                },
+
+            },
+            onkeyup:false,
+            focusCleanup:true,
+            success:"valid",
+            //	submitHandler:function(form){
+            //$(form).ajaxSubmit();
+            //var index = parent.layer.getFrameIndex(window.name);
+            //parent.$('.btn-refresh').click();
+            //parent.layer.close(index);
+            //	}
+        });
+    });
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

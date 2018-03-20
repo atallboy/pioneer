@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+    <meta content=" width = device-width , initial-scale = 1.0 , maximum-scale = 1.0 , user-scalable = no " id="viewport" name="viewport">
+
+    <meta name="viewport" content="width=640,user-scalable=0, target-densitydpi=device-dpi">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">	
+    <title>大学生创业园</title>
+
+   <link href="/static/index/static/css/mobile/index-ing.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">
+	<a href="http://hbutcyy.dxsbb.com/index.php/index/Mobile/index"><img src="/static/index/static/img/mobile1.png"></a>
+</div>
+<div class="nav">
+	<div class="menu" onclick="openor()">
+		<div class="clearfloat"></div>
+		<ul>
+		<li class="menu-left">导航</li>
+		<li class="menu-right"><div class="menu-box"></div></li>			
+		</ul>
+	</div>
+</div>
+
+
+<div class="first" id="first">
+	<?php
+        foreach ($nav as $k=>$v){
+        echo '
+	<a href="./nav?id='.$v['id'].'&name='.$v['name'].'"><div class="nav-menu">'.$v['name'].'</div></a>';}?>
+
+</div>
+
+
+<div class="blank"></div>
+<div class="news">
+	<div class="news-top">
+		<div class="news-name"><a href="./category?name=新闻速递">新闻速递</a></div>
+	</div>
+	<div class="news-list">
+		<ul>
+			<?php foreach ($news as $k){
+                echo '
+			<li>
+				<a href="./detail?id='.$k['id'].'">
+				<span class="l-title">'.$k['tittle'].'</span>
+				<span class="l-time">'.$k['publish_time'].'</span>					
+				</a>
+			</li>';}?>
+						
+		</ul>
+	</div>
+</div>
+
+<div class="clearfloat"></div>
+<div class="blank"></div>
+<div class="news">
+	<div class="news-top">
+		<div class="news-name"><a href="./category?name=通知公告">通知公告</a></div>
+	</div>
+	<div class="news-list">
+		<ul>
+			<?php foreach ($announcement as $k){
+                echo '
+			<li>
+				<a href="./detail?id='.$k['id'].'">
+				<span class="l-title">'.$k['tittle'].'</span>
+				<span class="l-time">'.$k['publish_time'].'</span>					
+				</a>                                  
+			</li>';}?>						
+		</ul>
+	</div>
+</div>
+
+<div class="clearfloat"></div>
+<div class="blank"></div>
+<div class="news">                                            
+	<div class="news-top">
+		<div class="news-name"><a href="./activeList">园区活动</a></div>
+	</div>
+	<div class="news-list">
+		<a href="active?id={$active['id'];?>">
+		<div class="detail">
+			<ul>
+				<li><?php echo $active['name'];?></li>
+				<li>活动时间：<?php echo $active['time'];?></li>
+				<li>活动地点：<?php echo $active['address'];?></li>
+				<li>活动内容：<?php echo $active['detail'];?></li>
+			</ul>
+		</div>
+		</a>
+	</div>
+</div>
+<div class="blank"></div>
+<div class="clearfloat"></div>
+<div class="blank"></div>
+<div class="news">
+	<div class="news-top">
+		<div class="news-name"><a href="./companyList">园区企业</a></div>
+	</div>
+	<div class="news-list">
+		<div class="company">
+			 <?php foreach($company as $k){
+                echo '
+			<div class="list">
+				<a href="./company?id='.$k['id'].'">
+					<img src="/upload/image/detail/'.$k['image'].'">
+					<div class="name">'.$k['tittle'].'</div>
+				</a>
+			</div>';}?>
+
+		</div>
+
+	</div>
+</div>
+<div class="footer">
+	<div class="f-top"></div>
+	<div class="f-center">版权所有 湖北工业大学大学生创业园<br />
+地址： 湖北省武汉市洪山区南李路28号 邮编：430068</div>
+	<div class="f-bottom"></div>
+</div>
+</body>
+
+   <script type="text/javascript">
+   
+		 function openor(){
+		 	var value=window.getComputedStyle(document.getElementById("first") , null).display;
+		 	 if(value == 'none'){ 	
+		 	 	 var obj = document.getElementById("first");  obj.style.display= "block";	 
+		 	 }else if(value == 'block'){
+		 	 	var obj = document.getElementById("first");  obj.style.display= "none";	
+		 	 }
+		 }
+   </script>
+</html>

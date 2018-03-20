@@ -1,0 +1,8 @@
+AppID ：wxb6bc39f879c2b1dc
+AppSecret ：18a23ff58ecd7919ef4f066364e95772  
+商户号 1492896932
+商户api密钥 chenchangjiang111112222233333444
+
+https://open.weixin.qq.com/connect/qrconnect?appid=wxb6bc39f879c2b1dc&redirect_uri=http%3A%2F%2Fwx.dxsbb.com&response_type=code&scope=snsapi_login&state=3d6be0a4035d839573b04816624a415e#wechat_redirect
+
+https://open.weixin.qq.com/connect/qrconnect?appid=wxbdc5610cc59c1631&redirect_uri=https%3A%2F%2Fpassport.yhd.com%2Fwechat%2Fcallback.do&response_type=code&scope=snsapi_login&state=3d6be0a4035d839573b04816624a415e#wechat_redirect

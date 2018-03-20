@@ -1,0 +1,21 @@
+{include file="public/static" /}
+
+<LINK rel="stylesheet" type="text/css" href="/static/index/static/css/activeapply/showDetail.css">
+
+{include file="public/header_index" /}
+<div class="banner">
+	<div class="b_left">
+		<ul>
+			<li class="li_name">活动列表</li>
+			<?php foreach ($list as $key=>$value){
+			echo '<li><a href="../../index/Activeapply/showDetail?id='.$value['id'].'">'.$value['name'].'</a></li>';
+		}?>
+		</ul>
+	</div>
+	<div class="b_right">
+		<div class="title">{$data['name']}</div>
+		<div class="time">文章出处：{$data['publisher']}   发布时间：{$data['time']}</div>
+		<div class="detail">{$data['regular']}
+</div>
+	</div>
+</div>

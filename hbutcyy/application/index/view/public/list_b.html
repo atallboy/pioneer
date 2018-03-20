@@ -1,0 +1,46 @@
+<!--  模板引入需同时引入css样式文件
+    <link href="/static/index/static/css/public/common.css" rel="stylesheet" type="text/css">
+    <link href="/static/index/static/css/public/detail.css" rel="stylesheet" type="text/css">
+-!>
+
+
+
+
+    <!--幻灯片开始-->
+    <!--幻灯片结束-->
+    <!--主体开始-->
+    <div class="detail">
+      <!--左侧主体开始-->
+      <!--左侧主体开始-->
+<div class="left_menu">
+<h2>{$first_name}</h2>
+<ul>
+                <?php foreach ($category as $key =>$value){ echo '
+                <LI><A href="../../index/index/companyDetail?id='.$value['id'].'"
+                       target="">'.$value['tittle'].'</A> </LI>
+                ';}?>
+</ul>
+</div>
+<!--左侧主体结束-->
+      <!--左侧主体结束-->
+      <!--右侧主体开始-->
+      <div class="article">
+        <h3 class="title">
+          <div class="position">当前位置：<a href="#">{$first_name}</a> &gt; <a href="#">{$name}</a></div>
+          <span>{$name}</span>
+        </h3>
+        <div class="article_list">
+
+    <div class="title" style="width: 100%;height: 50px;line-height: 50px;text-align: center;font-family: '微软雅黑';font-size: 18px;">{$data['tittle']}</div>
+    <div class="detail" style="width: 700px;height: auto;margin: 0 auto;">{$data['content']}
+
+
+        </div>
+
+      </div>
+      <!--右侧主体结束-->
+    </div>
+    <!--主体结束-->
+    <!--友情链接开始-->
+<div class="clear"></div>
+<!--友情链接结束-->

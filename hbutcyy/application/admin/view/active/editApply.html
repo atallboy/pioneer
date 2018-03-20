@@ -1,0 +1,96 @@
+{include file="public/header" /}
+<body>
+<article class="page-container">
+    <form class="form form-horizontal" id="form-admin-add" action="dealActiveApply" method="post">
+        <input type="hidden" value="{$data['id']}" name="id">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>报名人：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                {$data['name']}
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>报名团队：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                {$data['team']}
+            </div>
+        </div>		
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>报名团队：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                {$data['item']}
+            </div>
+        </div>	
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">审批：</label>
+            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+			<select class="select" name="status" size="1">
+
+                <option value="未认证" <?php if($data['status']=='待处理'){echo 'selected';}?>>待处理</option>
+                <option value="通过" <?php if($data['status']=='通过'){echo 'selected';}?>>通过</option>
+                <option value="待定" <?php if($data['status']=='待定'){echo 'selected';}?>>待定</option>	
+                <option value="报名失败" <?php if($data['status']=='报名失败'){echo 'selected';}?>>报名失败</option>					
+            </select>
+			</span> </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span></label>
+            <div class="formControls col-xs-8 col-sm-9">
+               
+            </div>
+        </div>	
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+
+{include file="public/footer" /}
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        $("#form-admin-add").validate({
+            rules:{
+                adminName:{
+                    required:true,
+                    minlength:4,
+                    maxlength:16
+                },
+
+            },
+            onkeyup:false,
+            focusCleanup:true,
+            success:"valid",
+            submitHandler:function(form){
+                $(form).ajaxSubmit({
+                    type: 'post',
+                    url: "xxxxxxx" ,
+                    success: function(data){
+                        layer.msg('添加成功!',{icon:1,time:1000});
+                    },
+                    error: function(XmlHttpRequest, textStatus, errorThrown){
+                        layer.msg('error!',{icon:1,time:1000});
+                    }
+                });
+                var index = parent.layer.getFrameIndex(window.name);
+                parent.$('.btn-refresh').click();
+                parent.layer.close(index);
+            }
+        });
+    });
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>
